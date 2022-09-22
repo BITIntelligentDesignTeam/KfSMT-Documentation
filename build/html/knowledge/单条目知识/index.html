@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>单条目知识 &mdash; KfSMT v1.0 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="知识模块——形状型知识" href="%E5%BD%A2%E7%8A%B6%E5%9E%8B%E7%9F%A5%E8%AF%86.html" />
+    <link rel="prev" title="知识模块" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> KfSMT
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">知识模块</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#id2">知识的定义和划分</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#id3">知识模块的主要功能</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">单条目知识</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="%E5%BD%A2%E7%8A%B6%E5%9E%8B%E7%9F%A5%E8%AF%86.html">知识模块——形状型知识</a></li>
+<li class="toctree-l4"><a class="reference internal" href="%E5%8D%95%E8%B0%83%E5%9E%8B%E7%9F%A5%E8%AF%86.html">知识模块——单调型知识</a></li>
+<li class="toctree-l4"><a class="reference internal" href="%E5%B1%9E%E6%80%A7%E5%9E%8B%E7%9F%A5%E8%AF%86.html">知识模块——属性型知识</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">使用说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../%E5%A4%9A%E6%9D%A1%E7%9B%AE%E7%9F%A5%E8%AF%86/index.html">多条目知识</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">KfSMT</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">知识模块</a> &raquo;</li>
+      <li>单条目知识</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/knowledge/单条目知识/index.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>单条目知识<a class="headerlink" href="#id1" title="永久链接至标题"></a></h1>
+<p>该部分的功能为对单条知识的操作，包括知识的读取、查看和新建。该部分的类图如下所示，代表着不同类型的知识。
+KnowledgeBase为所有知识的基类，ExperienceBase为经验型知识（工程经验），PhysicsBase为物理知识，MappingBase和SpaceBase为工程经验中的映射型知识和空间型知识，ShapeKnowledge（形状型知识）、MonotonicityKnowledge（单调型知识）、AttributeKnowledge（属性型知识）则为映射型知识中的具体种类。</p>
+<img alt="../../_images/知识模块单条目知识的类图.png" src="../../_images/知识模块单条目知识的类图.png" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="%E5%BD%A2%E7%8A%B6%E5%9E%8B%E7%9F%A5%E8%AF%86.html">知识模块——形状型知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%8D%95%E8%B0%83%E5%9E%8B%E7%9F%A5%E8%AF%86.html">知识模块——单调型知识</a></li>
+<li class="toctree-l1"><a class="reference internal" href="%E5%B1%9E%E6%80%A7%E5%9E%8B%E7%9F%A5%E8%AF%86.html">知识模块——属性型知识</a></li>
+</ul>
+</div>
+<section id="id2">
+<h2>使用说明<a class="headerlink" href="#id2" title="永久链接至标题"></a></h2>
+<p><strong>KnowledgeBase中的属性</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>path</p></td>
+<td><p>str</p></td>
+<td><p>储存知识文件的路径</p></td>
+</tr>
+<tr class="row-odd"><td><p>True</p></td>
+<td><p>str</p></td>
+<td><p>知识的具体类型，如“形状型”、“单调型”等等</p></td>
+</tr>
+<tr class="row-even"><td><p>knowledge</p></td>
+<td><p>dict</p></td>
+<td><p>包含着所有知识信息的字典，可以用于后续的代理模型构建等操作</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>KnowledgeBase中的API</strong></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>作用</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>readKnowledge()</p></td>
+<td><p>将xml文件格式的知识读取为 dict格式</p></td>
+</tr>
+<tr class="row-odd"><td><p>writeKnowledge()</p></td>
+<td><p>新建xml文件格式的知识</p></td>
+</tr>
+<tr class="row-even"><td><p>visualKnowledge()</p></td>
+<td><p>查看知识的具体内容</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>__init__(path)</strong></p>
+<p>构造函数，用于传入知识的xml文件路径，每次实例化雷的时候均会调用该方法。</p>
+<p>参数：</p>
+<ul class="simple">
+<li><p>path，类型为str，需要读取、查看或者新建知识的xml文件路径</p></li>
+</ul>
+<p>示例：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from knowledge import ShapeKnowledge
+path = “C:\data\形状型知识2.txt”
+know1 = ShapeKnowledge(path)
+</pre></div>
+</div>
+<p><strong>readKnowledge() ‏‏‏→ dict</strong></p>
+<p>读取路径为先前传入的path的xml格式的知识，将其转化为方便后续操作的dict格式</p>
+<p>参数：None</p>
+<p>返回：</p>
+<ul class="simple">
+<li><p>knowledge，类型为dict，储存着知识所有信息的字典</p></li>
+</ul>
+<p>示例：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from knowledge import ShapeKnowledge
+path = “C:\data\形状型知识2.txt”
+know1 = ShapeKnowledge(path)
+know_dict = know1.readKnowledge()
+</pre></div>
+</div>
+<p><strong>visualKnowledge() ‏‏‏→ None</strong></p>
+<p>查看路径为先前传入的path的xml格式知识的具体内容，使用该方法前需要首先运行readKnowledge()</p>
+<p>示例：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from knowledge import ShapeKnowledge
+path = “C:\data\形状型知识2.txt”
+know1 = ShapeKnowledge(path)
+know_dict = know1.readKnowledge()
+know1.visualKnowledge()
+</pre></div>
+</div>
+<p>visualKnowledge()的运行结果如下图所示</p>
+<img alt="../../_images/visualKnowledge运行结果.png" class="align-center" src="../../_images/visualKnowledge运行结果.png" />
+<p><strong>writeKnowledge ( input_type,
+output_type,
+input_range ,
+mapping_relation,
+convar)     ‏‏‏ →    None</strong></p>
+<p>创建xml格式的知识文件，将其储存在先前传入的path路径中</p>
+<p>参数：</p>
+<ul class="simple">
+<li><p>input_type，输入的参数名称，类型为list</p></li>
+<li><p>output_type，输出的参数名称，类型为list</p></li>
+<li><p>input_range，输入参数的范围，类型为list</p></li>
+<li><p>mapping_relation，映射关系信息，类型为list</p></li>
+<li><p>convar，协变量信息，类型为list</p></li>
+</ul>
+<p>返回：None</p>
+<p>示例：:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>from knowledge import ShapeKnowledge
+path = “C:\data\形状型知识2.txt”
+know1 = ShapeKnowledge(path)
+know_dict = know1.writeKnowledge(input_type=[&#39;攻角&#39;],output_type=[&#39;法向力&#39;],
+input_range=[[3.0, 10.0]],
+mapping_relation=[&#39;单调递增&#39;],
+convar=[{&#39;convar_type&#39;: &#39;马赫数&#39;, &#39;convar_RangeOrValue&#39;: &#39;value&#39;, &#39;convar_value&#39;: 4.0},
+ {&#39;convar_type&#39;: &#39;雷诺数&#39;, &#39;convar_RangeOrValue&#39;: &#39;range&#39;, &#39;convar_range&#39;: [3.0, 5.0]}])
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="知识模块" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="%E5%BD%A2%E7%8A%B6%E5%9E%8B%E7%9F%A5%E8%AF%86.html" class="btn btn-neutral float-right" title="知识模块——形状型知识" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, shilei.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
