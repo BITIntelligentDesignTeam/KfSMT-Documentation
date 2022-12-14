@@ -1,9 +1,9 @@
 高斯过程
 =================================
 
-::
+代码示例如下::
 	
-	from data.CsvData import CsvData
+    from data.CsvData import CsvData
     from knowledge.KnowledgeSet import KnowledgeSet
     from benchmark.sphere import Sphere
 
@@ -14,7 +14,7 @@
     x = np.ones((trainNum, ndim))
     x[:, 0] = np.linspace(-10, 10.0, trainNum)
     x[:, 1] = 0.0
-
+     
     xt = np.ones((testNum, ndim))
     xt[:, 0] = np.linspace(-10, 10.0, testNum)
     xt[:, 1] = 0.0

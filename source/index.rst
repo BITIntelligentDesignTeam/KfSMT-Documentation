@@ -53,6 +53,8 @@ KfSMT的说明文档
    knowledge/index
    data/index
    surrogate_model/index
+   benchmark/index
+   instruction/index
   
 
 
